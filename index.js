@@ -13,7 +13,7 @@ const generateXlsx = function({
     defaultList = [],
     value = {},
     filepath = path.join(__dirname,"1.xlsx"),
-    cb
+    cb = function(){}
 }){
     let count = 0;
     let contentStringArr = [];

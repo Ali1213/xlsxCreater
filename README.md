@@ -11,6 +11,7 @@
     - y number类型,单选框的x轴坐标
     - value array类型, 数组项为单选框的值
 + value : json类型 key为`x轴-y轴`,value为填入值
++ filePath : string类型,生成文档的保存路径,默认路径为path.join(__dirname,"1.xlsx");
 
 ```
 //所有的参数都是从1开始，而非从0开始
@@ -25,6 +26,7 @@ generateXlsx({
     }],
     value:{
         "1-3":"我的中国"
-    }
+    },
+    filePath:path.join(__dirname,"1.xlsx")
 });
 ```

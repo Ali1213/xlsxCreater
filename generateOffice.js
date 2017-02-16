@@ -35,11 +35,13 @@ module.exports = function (officeFile, filepath,cb) {
 
 
         archive.on('error', function (err) {
-            throw err;
+            cb(err);
         });
 
         output.on('close', function() {
-            cb && cb();
+            cb(null,{
+                "result":"done"
+            });
             console.log("done")
         });
 };

@@ -12,9 +12,9 @@ const generateXlsx = function({
     column=0,
     defaultList = [],
     value = {},
-    filepath = path.join(__dirname,"1.xlsx"),
-    cb = function(){}
-}){
+    filepath = path.join(__dirname,"1.xlsx")
+},
+    cb = function(){}){
     let count = 0;
     let contentStringArr = [];
     const office={

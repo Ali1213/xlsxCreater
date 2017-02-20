@@ -4,11 +4,11 @@ var fs = require('fs');
 var path = require('path');
 var archiver = require('archiver');
 
-var archive = archiver('zip');
 
 module.exports = function (officeFile, filepath,cb) {
     'use strict';
 
+        var archive = archiver('zip');
         var output = fs.createWriteStream(filepath);
         var self = this;
         archive.pipe(output);
@@ -36,6 +36,7 @@ module.exports = function (officeFile, filepath,cb) {
 
         archive.on('error', function (err) {
             cb(err);
+            console.log(err)
         });
 
         output.on('close', function() {

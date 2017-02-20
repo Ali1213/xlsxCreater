@@ -28,7 +28,7 @@ generateXlsx({
     value:{
         "1-3":"我的中国"
     },
-    filePath:path.join(__dirname,"1.xlsx"),
-    cb
-});
+    filePath:path.join(__dirname,"1.xlsx")
+},
+     cb);
 ```
